@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petal 🌸</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="app">
+    
+    <div class="header">
+      <img src="Petal.jpeg" class="avatar" />
+      <div class="title-area">
+        <div class="logo">Petal 🌸</div>
+        <div class="tagline">Your soft space after a long day.</div>
+      </div>
+    </div>
+    
+    <div id="chat-container" class="chat-container"></div>
+    
+    <div class="input-area">
+      <input type="text" id="message-input" placeholder="Talk to Petal..." />
+      <button id="send-btn">Send</button>
+    </div>
+    
+  </div>
+
+<div id="limit-modal" class="modal hidden">
+  <div class="modal-content">
+    
+    <span class="close-btn" id="close-modal">&times;</span>
+    
+    <h2>🌸 Petal needs a little energy…</h2>
+    <p>You’ve used your 5 free replies for today.</p>
+    
+    <button id="watchAdBtn" class="modal-btn primary">
+      ▶ Watch Ad (+2 replies)
+    </button>
+    
+    <button id="petalPlusBtn" class="modal-btn premium">
+      💎 Petal Plus (Unlimited)
+    </button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
