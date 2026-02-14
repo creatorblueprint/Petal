@@ -151,41 +151,29 @@ function removeTyping() {
 
 // 🌸watch ad
 
-function watchAd() {
+const watchAdBtn = document.getElementById("watchAdBtn");
 
-  const smartLink = "https://omg10.com/4/10609758";
-
-  // Open ad in new tab
-  window.open(smartLink, "_blank");
-
-  const btn = document.getElementById("watchAdBtn");
-  btn.disabled = true;
-  btn.innerText = "Watching Ad...";
-
-  // Reward after 8 seconds
+watchAdBtn.addEventListener("click", () => {
+  
+  // 🎬 Simulate watching ad (2 seconds delay)
+  watchAdBtn.innerText = "Watching Ad...";
+  watchAdBtn.disabled = true;
+  
   setTimeout(() => {
+    
     repliesLeft += 2;
     localStorage.setItem("repliesLeft", repliesLeft);
-
-    hideLimitModal();
-
-    btn.disabled = false;
-    btn.innerText = "Watch Ad (+2 replies)";
-
-    showRewardToast();
-
-  }, 8000);
-}
-
-function showRewardToast() {
-  const rewardMsg = document.createElement("div");
-  rewardMsg.innerText = "✨ +2 replies unlocked!";
-  rewardMsg.className = "reward-toast";
-  document.body.appendChild(rewardMsg);
-
-  setTimeout(() => rewardMsg.remove(), 3000);
-}
-
+    
+    alert("✨ You earned +2 replies!");
+    
+    hideLimitModal(); // close popup
+    
+    watchAdBtn.innerText = "Watch Ad (+2 replies)";
+    watchAdBtn.disabled = false;
+    
+  }, 2000);
+  
+});
 // 🌸 Petal Plus 
 const petalPlusBtn = document.getElementById("petalPlusBtn");
 
